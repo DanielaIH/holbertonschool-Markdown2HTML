@@ -14,16 +14,16 @@ def markdown2html():
     """main program"""
     import markdown
     if len(argv) < 3:
-        stderr.write("Usage: ./markdown2html.py README.md README.html\n")
+        print("Usage: ./markdown2html.py README.md README.html\n", file=stderr)
         exit(1)
-    if len(argv) >= 2:
+    if len(argv) >= 3:
         if not path.exists(argv[1]):
             print("Missing {}\n".format(argv[1]), file=stderr)
             exit(1)
         with open(argv[1], "r") as f:
-            markdown = markdown.markdown(f.read())
+            markdownvar = markdown.markdown(f.read())
         with open(argv[2], "w") as f:
-            f.write(markdown + "\n")
+            f.write(markdownvar + "\n")
         exit(0)
 
 
