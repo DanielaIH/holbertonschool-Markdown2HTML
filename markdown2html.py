@@ -12,7 +12,7 @@ from os import path
 
 def markdown2html():
     """main program"""
-    import markdown
+
     if len(argv) < 3:
         print("Usage: ./markdown2html.py README.md README.html", file=stderr)
         exit(1)
@@ -20,6 +20,7 @@ def markdown2html():
         if not path.exists(argv[1]):
             print("Missing {}\n".format(argv[1]), file=stderr)
             exit(1)
+        import markdown
         with open(argv[1], "r") as f:
             markdownvar = markdown.markdown(f.read())
         with open(argv[2], "w") as f:
