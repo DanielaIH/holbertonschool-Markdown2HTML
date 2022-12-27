@@ -8,10 +8,11 @@ Second argument is the output file name
 
 from sys import argv
 from os import path
-import markdown
 
-if __name__ == "__main__":
+
+def markdown2html():
     """main program"""
+    import markdown
     if len(argv) < 2:
         print("Usage: ./markdown2html.py README.md README.html")
         exit(1)
@@ -24,3 +25,7 @@ if __name__ == "__main__":
         with open(argv[2], "w") as f:
             f.write(markdown)
         exit(0)
+
+
+if __name__ == "__main__":
+    markdown2html()
