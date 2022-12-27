@@ -14,7 +14,7 @@ def markdown2html():
     """main program"""
     import markdown
     if len(argv) < 3:
-        print("Usage: ./markdown2html.py README.md README.html\n", file=stderr)
+        stderr.write("Usage: ./markdown2html.py README.md README.html\n")
         exit(1)
     if len(argv) >= 2:
         if not path.exists(argv[1]):
