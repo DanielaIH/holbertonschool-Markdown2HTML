@@ -7,7 +7,7 @@ from os import path
 import markdown
 
 if __name__ == "__main__":
-
+    """main program"""
     if len(argv) < 2:
         print("Usage: ./markdown2html.py README.md README.html")
         exit(1)
